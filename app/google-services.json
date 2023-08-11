@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "886358581677",
+    "project_id": "handyhub-bce05",
+    "storage_bucket": "handyhub-bce05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886358581677:android:392c7896ab26b7c6aa4124",
+        "android_client_info": {
+          "package_name": "com.example.handyhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886358581677-s1h42h8or5dl536aalg08ciq37fordo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqCnDD1ECW3BbfHea7L7CorYc23L12M78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886358581677-s1h42h8or5dl536aalg08ciq37fordo4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

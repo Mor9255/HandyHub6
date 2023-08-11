@@ -8,18 +8,18 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="188dp"
-        android:layout_height="67dp"
-        android:layout_marginBottom="128dp"
+        android:layout_width="297dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="244dp"
         android:background="#0162DA"
-        android:text="Let's start"
+        android:text="Let's find a plumber"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold"
         app:iconTint="#56718E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -32,6 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.174"
-        app:srcCompat="@drawable/unnamed" />
+        app:srcCompat="@drawable/unnamed"
+        android:contentDescription="TODO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

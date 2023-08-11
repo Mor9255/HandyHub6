@@ -22,5 +22,14 @@ public class Welcome extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button button24 = findViewById(R.id.button24);
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Welcome.this, activity_login.class);
+                startActivity(intent);
+            }
+        });
     }
 }
