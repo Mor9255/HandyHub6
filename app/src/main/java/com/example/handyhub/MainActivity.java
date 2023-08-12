@@ -10,7 +10,6 @@ import android.widget.EditText;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.analytics.FirebaseAnalytics;
-
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
