@@ -4,38 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Feedback">
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/username"
+        android:id="@+id/name1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username:"
+        android:hint="Name:"
         android:textColor="#1E0927"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintBottom_toTopOf="@+id/feedback"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/password"
+        android:id="@+id/feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password:"
+        android:hint="Feedback:"
         android:textColor="#1F0C30"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/name1" />
 
-    <Button
-        android:id="@+id/login"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit"
         android:layout_width="138dp"
         android:layout_height="65dp"
         android:background="#0162DA"
-        android:text="Log in"
+        android:text="Submit"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -43,5 +43,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/feedback" />
 </androidx.constraintlayout.widget.ConstraintLayout>

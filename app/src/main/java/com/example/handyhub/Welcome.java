@@ -24,10 +24,10 @@ public class Welcome extends AppCompatActivity {
         });
 
         Button button24 = findViewById(R.id.button24);
-        button7.setOnClickListener(new View.OnClickListener() {
+        button24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Welcome.this, Login.class);
+                Intent intent = new Intent(Welcome.this, Feedback.class);
                 startActivity(intent);
             }
         });
