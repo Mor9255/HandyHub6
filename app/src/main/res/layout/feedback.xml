@@ -38,6 +38,7 @@
         android:layout_height="65dp"
         android:background="#0162DA"
         android:text="@string/submit"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp"

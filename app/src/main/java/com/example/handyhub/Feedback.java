@@ -48,8 +48,7 @@ public class Feedback extends AppCompatActivity {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
                                 Toast.makeText(Feedback.this, "Successful", Toast.LENGTH_SHORT).show();
-                                // Start Thanks activity
-                                Intent intent = new Intent(Feedback.this, Thanks.class);
+                                Intent intent = new Intent(Feedback.this, MainActivity.class);
                                 startActivity(intent);
                             }
                         }).addOnFailureListener(new OnFailureListener() {
