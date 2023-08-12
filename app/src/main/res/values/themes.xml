@@ -12,5 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!-- Add the textAppearanceButton attribute -->
+        <item name="textAppearanceButton">@style/Widget.AppCompat.Button</item>
     </style>
 </resources>

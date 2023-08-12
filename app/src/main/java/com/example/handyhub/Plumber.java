@@ -1,4 +1,3 @@
-
 package com.example.handyhub;
 
 import androidx.activity.result.ActivityResult;
@@ -10,20 +9,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Plumber extends AppCompatActivity {
 
-    //State
+    // State
     UserAdapter adapter;
 
     @Override
@@ -54,22 +56,44 @@ public class Plumber extends AppCompatActivity {
         ItemTouchHelper helper = new ItemTouchHelper(new SwipeToDeleteCallback(adapter));
         helper.attachToRecyclerView(recyclerView);
 
-
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Upload images before adding a new contact
+                uploadImagesToFirebaseStorage();
+
+                // Launch the NewContactActivity
                 Intent intent = new Intent(view.getContext(), NewContactActivity.class);
                 activityResultLauncher.launch(intent);
-
             }
         });
     }
 
     private void newContactResult(Intent data) {
         Bundle b = data.getExtras();
-        User user = (User)b.getSerializable("user");
+        User user = (User) b.getSerializable("user");
         adapter.addUser(user);
+    }
 
+    private void uploadImagesToFirebaseStorage() {
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference();
+
+        int[] imageResources = {R.drawable.image, R.drawable.image1, R.drawable.john, R.drawable.unnamed};
+
+        for (int i = 0; i < imageResources.length; i++) {
+            int resourceId = imageResources[i];
+            Uri imageUri = Uri.parse("android.resource://" + getPackageName() + "/" + resourceId);
+            StorageReference imageRef = storageRef.child("images/image_" + i + ".jpeg");
+
+            UploadTask uploadTask = imageRef.putFile(imageUri);
+
+            uploadTask.addOnSuccessListener(taskSnapshot -> {
+                // Image uploaded successfully
+            }).addOnFailureListener(e -> {
+                // Handle upload failure
+            });
+        }
     }
 }
